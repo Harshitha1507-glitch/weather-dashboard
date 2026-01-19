@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet/dist/leaflet.css"
+    />
+</head>
+<body>
+
+<div class="weather-app">
+    <div class="top-bar">
+        <h1>🌤 Weather</h1>
+        <button onclick="toggleDarkMode()">🌙</button>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div class="weather-card hidden" id="weatherCard">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon">
+        <h1 id="temperature"></h1>
+        <p id="description"></p>
+
+        <div class="details">
+            <div>💧 Humidity <br><b id="humidity"></b></div>
+            <div>🌬 Wind <br><b id="wind"></b></div>
+        </div>
+
+        <div class="details">
+            <div>🌡 Feels Like <br><b id="feels"></b></div>
+            <div>☁ Cloudiness <br><b id="clouds"></b></div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
